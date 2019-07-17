@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <title>上传头像</title>
+</head>
+<style type='text/css'>
+    body {
+        padding-top: 120px;
+    }
+    #failed{
+        display: none;
+    }
+</style>
+
+<body>
+    <%include header.ejs%>
+    <div class="container">
+        <div class="row col-lg-6 ">
+            <h1>上传头像</h1>
+
+            <form method="POST" action="/dosetavater" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">选择头像</label>
+                    <input type="file" class="form-control" id="file" name="image" >
+                </div>
+                
+                <button type="submit" class="btn btn-default" id="submit">上传</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

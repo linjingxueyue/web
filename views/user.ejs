@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <title>注册登录</title>
+</head>
+<style type='text/css'>
+    body {
+        padding-top: 120px;
+    }
+    img{
+        border-radius: 50%;
+    }
+    .header{
+        margin-bottom: 30px;
+    }
+</style>
+<body>
+    <%include header.ejs%>
+    <div class="container">
+        <div class="row header">
+            <div class="col-lg-1 col-md-1">
+                    <img src="/avatar/<%=avatar%>" alt="">
+            </div>
+            <div class="col-lg-3 col-lg-offset-1 col-md-1 col-md-offset-1">
+                    <h1><%=user%>的说说</h1>
+            </div>
+        </div>
+            
+        <div class="row">
+            <div class="col-lg-6">
+                <% for(var i=0;i<posts.length;i++){ %>
+                    <div style="border-bottom: solid black 1px;margin-bottom: 10px">
+                        <p><%= posts[i].content %></p>
+                        <p><%= posts[i].datetime %></p>
+                    </div>
+                <% } %>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
